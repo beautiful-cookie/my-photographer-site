@@ -1,0 +1,124 @@
+@import url(../../fonts.css);     
+
+
+
+.generation-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
+.generation-box {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 15px; 
+    margin-top: 50px; 
+    width: 800px;
+    padding: 20px;
+}
+
+.refDefinitionText {
+    float: left;
+    width: 50%;
+    text-align: center; 
+}
+
+.refDefH2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-family: 'Comfortaa', sans-serif; 
+    font-size: 30px;
+}
+
+.refDefP {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 18px; 
+}
+
+.refDefinitionImage {
+    float: right;
+    max-width: 50%; 
+    width: 300px; 
+    user-select: none; 
+}
+
+.refDefinitionImage img {
+    width: 100%;
+    height: auto; 
+    border-radius: 15px; 
+}
+
+
+
+.fussionBrainDescription { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: black; 
+    width: 100%; 
+    margin-top: 100px; 
+}
+
+.fbDescrText {
+    width: 35%; 
+    text-align: center; 
+    color: white; 
+    font-family: 'Montserrat', sans-serif; 
+    padding: 20px; 
+    font-size: 20px; 
+}
+
+.GIinputWrapper {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    gap: 15px; 
+    margin-top: 50px; 
+}
+.GIinput {  
+    width: 50%; 
+    padding: 10px; 
+    padding-left: 35px;
+    border-radius: 10px;  
+    font-family: 'Montserrat', sans-serif; 
+	font-size: 18px;
+    outline: none;   
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #C4D1EB;
+	border-radius: 5px;
+	box-shadow: 3px 3px 2px 0px #E2E2E2;
+	transition: .3s ease;
+}
+.GIinput:focus {
+	background: #F2F2F2;
+	border: 1px solid #5A7EC7;
+	border-radius: 10px;
+}
+.GIinput::placeholder {
+	color: #DDDDDD;
+}
+
+
+
+.GIinputBtn { 
+    background-color: white;
+    padding: 10px 15px; 
+    color: black; 
+    font-size: 18px;  
+    border: 1px solid black; 
+    border-radius: 10px; 
+    font-family: 'Neucha', cursive; 
+    user-select: none;  
+    transition: background-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+
+    &:hover {
+        background-color: black;
+        color: white;  
+        text-shadow: 0 0 10px white; 
+    }
+}

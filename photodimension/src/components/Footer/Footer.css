@@ -1,0 +1,137 @@
+@import url(../../fonts.css);
+
+footer { 
+    display: flex; 
+    justify-content: space-around; 
+    align-content: center; 
+    flex-direction: column; 
+    color: white; 
+    background-color: black;
+    width: 100%; 
+    height: 500px; 
+    margin-top: 120px; 
+}
+
+
+.contacts-block {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;  
+    align-content: center;  
+}
+.contacts-information {
+    display: flex; 
+    justify-content: space-around; 
+    align-content: center;  
+    width: 100%; 
+    overflow: hidden; 
+} 
+
+.footer-contacts {
+    font-size: 40px; 
+    font-family: 'Comfortaa', sans-serif; 
+}
+
+.phone-mail {
+    font-size: 20px;
+    font-family: 'Balsamiq Sans', sans-serif; 
+}
+
+
+
+.social-block { 
+    display: flex; 
+    flex-direction: column;  
+    justify-content: center;   
+    align-items: center; 
+    gap: 12px;
+}
+
+.social-item { 
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 5px;    
+    color: white; 
+    font-size: 20px; 
+    font-family: 'Balsamiq Sans', sans-serif;  
+    text-decoration: none;   
+    transition: text-shadow 0.25s ease-in-out;
+
+    &:hover {
+        text-shadow: 0 0 10px white; 
+    }
+}
+
+.social-img {
+    width: 46px; 
+    height: auto; 
+}
+
+
+.copyright { 
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 800px) { 
+    footer {    
+        justify-content: space-around; 
+        gap: 20px; 
+        height: 500px; 
+    }
+    .social-block {
+        gap: 19px; 
+    }
+    .social-item {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .footer-contacts {
+        font-size: 31px; 
+    }
+    .phone-mail {
+        font-size: 16px; 
+    }
+    .social-item {
+        font-size: 16px;
+    }
+    .copyright {
+        font-size: 14px; 
+    }
+} 
+
+@media screen and (max-width: 500px) {
+    .contacts-information {
+        flex-direction: column; 
+        gap: 60px;
+    }
+    .contacts-block {
+        text-align: center;
+    }
+    .social-block {
+        flex-direction: row; 
+        gap: 36px; 
+    }
+    .footer-contacts {
+        font-size: 31px; 
+    }
+    .phone-mail {
+        font-size: 16px; 
+    }
+    .social-item {
+        font-size: 16px;
+    }
+    .copyright {
+        font-size: 14px; 
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .social-block {
+        gap: 10px; 
+    }
+}

@@ -1,0 +1,164 @@
+.prices-content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.prices-wrapper {
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+.prices-item {
+    position: relative;
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 50px;
+    user-select: none;
+}
+
+.prices-img {
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    transition: filter 0.35s ease-in-out;
+}
+
+.prices-info {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100%;
+    top: 0; 
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.prices-info-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    height: 70%;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.prices-h1 {
+    font-size: 20px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.prices-text {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 5px;
+}
+
+.prices-item:hover .prices-img {
+    filter: blur(0);
+    transition: filter 0.35s ease-in-out;
+}
+
+.prices-item:hover .prices-info {
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.35s ease-in-out;
+}
+
+.prices-item:hover .prices-info-wrapper {
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+    .prices-wrapper {
+        max-width: 800px;
+    }
+    
+    .prices-info-wrapper {
+        width: 86%;
+    }
+    
+    .prices-item {
+        width: 350px;
+    }
+
+    .prices-h1 {
+        font-size: 17px;
+    }
+
+    .prices-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .prices-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prices-item {
+        margin-bottom: 30px;
+    }
+
+    .prices-info-wrapper {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .prices-wrapper {
+        max-width: 300px;
+    }
+    
+    .prices-info-wrapper {
+        width: 86%;
+    }
+    
+    .prices-item {
+        width: 300px;
+    }
+
+    .prices-h1 {
+        font-size: 15px;
+    }
+
+    .prices-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .prices-wrapper {
+        max-width: 90%;
+    }
+    
+    .prices-info-wrapper {
+        width: 86%;
+    }
+    
+    .prices-item {
+        width: 100%;
+    }
+
+    .prices-h1 {
+        font-size: 4.5vw;
+    }
+
+    .prices-text {
+        font-size: 3.6vw;
+    }
+}

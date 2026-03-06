@@ -1,0 +1,219 @@
+@import '../../fonts.css'; 
+
+.transparent-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white; 
+  box-shadow:
+  0px 15.5px 10px rgba(0, 0, 0, 0.035),
+  0px 124px 80px rgba(0, 0, 0, 0.07);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; 
+  padding: 16px;
+  margin-top: 0.5%;
+}
+
+.logo {
+  width: 60px; 
+  height: auto;
+  border-radius: 50%;
+}
+
+.bookmarks-container {
+  position: relative;
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  gap: 74px; 
+  margin-right: 10%;
+}
+
+.bookmark {
+  width: auto; 
+  height: 123px;
+  position: absolute;
+  top: -84px; 
+  z-index: 1;  
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(15px);
+  }
+}
+
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-right: 5%;
+  font-family: 'Bellota Text', sans-serif; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-shadow: 1px 4px 20px rgba(0,0,0,0.61);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05); 
+  }
+} 
+
+
+.nav-links-mobile {
+  display: none;
+}
+
+
+/* Стили активной ссылки  */
+.active {
+  transform: scale(1.2);
+}
+
+
+.mobile-menu {
+  display: none; 
+}
+
+
+@media screen and (max-width: 1100px) {
+  .bookmarks-container {
+    margin-right: 15%; 
+  } 
+
+  .bookmark {
+    height: 119px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .transparent-header {
+    border-radius: 10px;
+    box-shadow:
+    0px 3.1px 10px rgba(0, 0, 0, 0.035),
+    0px 25px 80px rgba(0, 0, 0, 0.07); 
+    background-color: white;
+  }
+
+  .bookmarks-container {
+    margin-right: 40%; 
+  } 
+
+  .mobile-menu {
+    display: block; 
+    position: absolute;  
+    top: 25px;
+    right: 60px; 
+    cursor: pointer; 
+    z-index: 1000;
+  } 
+
+  .nav-links {
+    display: none; 
+  }
+
+  .nav-links-mobile {
+    position: fixed;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;  
+    gap: 30px; 
+    width: 100%; 
+    left: -100%; 
+    font-size: 28px;   
+    padding-top: 20px; 
+    padding-bottom: 20px;  
+    border-radius: 10px;
+    height: 100%; 
+    z-index: 500; 
+    background-color: white; 
+    font-family: 'Bellota Text', sans-serif;  
+    transition: left 1s; 
+  } 
+
+  .active-mobile-nav-links {
+    left: 0; 
+  }
+
+  .nav-links-mobile a {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-self: center;  
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 4px 20px rgba(0,0,0,0.61);
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .bookmarks-container {
+    margin-right: 45%;  
+    gap: 55px;
+  } 
+
+  .bookmark {
+    height: 100px; 
+    top: -75px;
+  }
+
+  .logo {
+    width: 50px;
+  } 
+
+  .mobile-menu {
+    width: 35px; 
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .bookmarks-container {
+    margin-right: 55%;  
+    gap: 45px;
+  } 
+
+  .bookmark {
+    height: 90px; 
+    top: -65px;
+  }
+
+  .logo {
+    width: 35px;
+  } 
+
+  .mobile-menu {
+    width: 30px; 
+    right: 35px;
+    top: 15px;
+  }
+} 
+
+@media screen and (max-width: 300px) {
+  .transparent-header {
+    justify-content: space-between;
+  }
+  .bookmarks-container {
+    display: none; 
+  } 
+}

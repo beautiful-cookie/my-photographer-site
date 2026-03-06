@@ -1,0 +1,178 @@
+.contacts-content-box { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;  
+    margin-top: 50px; 
+}
+
+.contactsWrapper {
+    width: auto;
+    padding: 40px 55px;
+    min-width: 500px;
+    background-color: #F6F6F6FF;
+    border-radius: 15px;
+    border: 2px solid #ccc; /* Add border for the "inset" effect */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.emailField {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Match the background border color */
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    background-color: rgb(255, 255, 255); /* Match the background color */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Add inset shadow for depth effect */
+    transition: border-color 0.3s ease;
+}
+
+.emailField:hover,
+.emailField:focus {
+    /* border-color: #007bff;  */
+    border-color: #737373; 
+}
+
+.emailMessageField {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Match the background border color */
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    background-color: rgb(255, 255, 255); /* Match the background color */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Add inset shadow for depth effect */
+    transition: border-color 0.3s ease;
+}
+
+.emailMessageField:hover,
+.emailMessageField:focus {
+    /* border-color: #007bff;  */
+    border-color: #737373; 
+}
+
+
+.contactSendMessageButton {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(180, 180, 180);
+    background-color: white;
+    padding: 6px 16px;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-user-select: none;
+    user-select: none;
+    transition: background-color 0.35s ease, color 0.4s ease, text-shadow 0.4s ease;
+    overflow: hidden;
+    z-index: 400;
+}
+    
+.contactSendMessageButton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    transition: width 0.35s ease; 
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.contactSendMessageButton:hover::before {
+    width: 100%;
+}
+
+.contactSendMessageButton:hover {
+    color: white;
+    text-shadow: 0 0 8px 15px white;
+}
+
+/* Интересный фон: #F0F0F0FF */
+
+.successMessagePopup, .errorMessagePopup {
+    position: fixed;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    transform: translateY(-100%);
+    z-index: 9999; 
+    font-family: 'Montserrat', sans-serif; 
+    animation: fadeOut 3s ease;
+}
+
+.successMessagePopup span {
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #58f55d;
+}
+
+.errorMessagePopup span {
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #f55d5d;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 1;
+        transform: translateY(7vh);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(7vh);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contactsWrapper {
+        min-width: 300px; 
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contactsWrapper {
+        width: 100%;
+        min-width: 0px;
+        font-size: 14px;
+        padding: 30px 20px;
+    }
+
+    .emailField, .emailMessageField {
+        width: 90%;
+        font-size: 14px;
+    } 
+
+    .contactSendMessageButton {
+        width: 90%;
+        font-size: 14px; 
+    }
+}
